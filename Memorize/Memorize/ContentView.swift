@@ -26,9 +26,7 @@ struct ContentView: View {
             Spacer()
             HStack{
                 remove
-                Spacer()
                 shuffle
-                Spacer()
                 add
                 
                 
