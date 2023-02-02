@@ -1,2 +1,4 @@
 # Memorize
 choose card
+i
+
