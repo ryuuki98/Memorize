@@ -26,7 +26,9 @@ struct ContentView: View {
             Spacer()
             HStack{
                 remove
+                Spacer()
                 shuffle
+                Spacer()
                 add
                 
                 
@@ -55,6 +57,7 @@ struct ContentView: View {
             
         } label:{
             Image(systemName: "plus.circle")
+              
         }
         
         
@@ -64,6 +67,16 @@ struct ContentView: View {
             
         }label: {
             Text("shuffle")
+        }
+    }
+    var clear: some View{
+        Button{
+            
+        }label: {
+            VStack{
+                Text("clear")
+                Text("card")
+            }
         }
     }
     
@@ -91,12 +104,12 @@ struct CardView: View{
             }
             
         }
-        .onTapGesture{
+        .onTapGesture {
             isFaceUP = !isFaceUP
         }
     }
 }
-
+    
 
 
 
@@ -132,9 +145,11 @@ struct CardView: View{
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View  {
+       
         ContentView()
             .preferredColorScheme(.light)
         ContentView()
             .preferredColorScheme(.dark)
+        
     }
 }
