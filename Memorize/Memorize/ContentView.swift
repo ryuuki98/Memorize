@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var emojis = ["🍎","🍐","🍊","🍌","🍉","🍓","🫐","🍇","🍑","🧄","🌽","🍆","🥑","🥦","🧅","🫑","🍔","🌭","🧇","🥩","🍗","🍕"]
     
-    @State var emojiCount = 3
+    @State var emojiCount = 20
     
     var body: some View {
         VStack{
@@ -23,16 +23,7 @@ struct ContentView: View {
                 
             }
             .foregroundColor(.red)
-            Spacer()
-            HStack{
-                remove
-                Spacer()
-                shuffle
-                Spacer()
-                add
-                
-                
-            }
+           
             .padding(.horizontal)
             .font(.largeTitle)
             
@@ -40,47 +31,6 @@ struct ContentView: View {
         .padding(.all)
         
     }
-    var remove: some View{
-        Button{
-            if emojiCount > 1{
-                emojiCount-=1}
-        }
-    label:{
-        Image(systemName: "minus.circle")
-    }
-        
-    }
-    var add: some View{
-        Button{
-            if emojiCount<emojis.count{
-                emojiCount += 1}
-            
-        } label:{
-            Image(systemName: "plus.circle")
-              
-        }
-        
-        
-    }
-    var shuffle: some View{
-        Button{
-            
-        }label: {
-            Text("shuffle")
-        }
-    }
-    var clear: some View{
-        Button{
-            
-        }label: {
-            VStack{
-                Text("clear")
-                Text("card")
-            }
-        }
-    }
-    
-    
     
 }
 
@@ -109,8 +59,13 @@ struct CardView: View{
         }
     }
 }
-    
+/*
+func multiply(operate : Int , by : Int) -> Int{
+       return operate * by
+}
 
+multiply(operate: 5, by: 6)
+*/
 
 
 
