@@ -1,4 +1,3 @@
 # Memorize
 choose card
-i
-
+2023/02/06 - 6:30pm start
